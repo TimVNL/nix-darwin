@@ -41,13 +41,12 @@
     };
 
     taps = [
-      # place extra home taps here
+      # place extra brew taps here
     ];
 
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
-      # "aria2"  # download tool
     ];
 
     # `brew install --cask`
@@ -60,6 +59,7 @@
        "spotify"
        "whatsapp"
        "discord"
+       "signal"
     ];
   };
 }
