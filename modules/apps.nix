@@ -19,6 +19,8 @@
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPackages = with pkgs; [
     git
+    dockutil
+    htop
   ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -31,6 +33,11 @@
       autoUpdate = false;
       # 'zap': uninstalls all formulae(and related files) not listed here.
       cleanup = "zap";
+    };
+
+    caskArgs = {
+      appdir = "~/Applications";
+      require_sha = true;
     };
 
     taps = [
