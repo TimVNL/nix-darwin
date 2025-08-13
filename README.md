@@ -12,10 +12,10 @@
 4. Search `TODO` in this `minimal` folder, and complete all the TODOs.
 5. Run the following command in the root of your nix configuration to start your nix-darwin journey(please change `hostname` to your hostname):
    ```bash
-	nix build .#darwinConfigurations.hostname.system \
-		--extra-experimental-features 'nix-command flakes'
+	 nix build .#darwinConfigurations.hostname.system \
+ 	--extra-experimental-features 'nix-command flakes'
 
-	./result/sw/bin/darwin-rebuild switch --flake .#hostname
+ sudo -E ./result/sw/bin/darwin-rebuild switch --flake .#hostname
    ```
 
 To simplify the command, adding the following content by create a `Makefile` in the root of your nix configuration:
@@ -26,7 +26,7 @@ deploy:
 	nix build .#darwinConfigurations.hostname.system \
 	   --extra-experimental-features 'nix-command flakes'
 
-	./result/sw/bin/darwin-rebuild switch --flake .#hostname
+	sudo -E ./result/sw/bin/darwin-rebuild switch --flake .#hostname
 ```
 
 Then you can run `make deploy` in the root of your nix configuration to deploy your configuration.
@@ -47,16 +47,5 @@ Your current nix-darwin configuration's structure should be as follows:
 │   └── system.nix      # defines your macOS's system configuration(like dock, trackpad, keyboard, finder, loginwindow, etc.)
 └── README.md
 ```
-
-
-## Notes on Network Proxy
-
-If you are in a network environment that requires proxy(such as China), you may need to set up proxy for nix and homebrew.
-
-Please refer to the `rich-demo` folder for more details:
-
-- [rich-demo/scripts/darwin_set_proxy.py](/rich-demo/scripts/darwin_set_proxy.py)
-- [rich-demo/Makefile](/rich-demo/Makefile)
-- [rich-demo - homebrew's mirror settings](/rich-demo/modules/homebrew-mirror.nix)
 
 

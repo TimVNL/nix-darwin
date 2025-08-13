@@ -12,7 +12,7 @@
   nixConfig = {
     substituters = [
       # Query the mirror of USTC first, and then the official cache.
-      "https://mirrors.ustc.edu.cn/nix-channels/store"
+      #"https://mirrors.ustc.edu.cn/nix-channels/store"
       "https://cache.nixos.org"
     ];
   };
@@ -39,7 +39,7 @@
     darwin,
     ...
   }: let
-    # TODO replace with your own username, system and hostname
+    # TODO replace with your own username, system, and hostname
     username = "timv";
     system = "aarch64-darwin"; # aarch64-darwin or x86_64-darwin
     hostname = "timv-m1mini";
@@ -58,8 +58,10 @@
         ./modules/apps.nix
 
         ./modules/host-users.nix
+        ./modules/dock.nix
       ];
     };
+
     # nix code formatter
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
   };

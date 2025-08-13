@@ -27,15 +27,14 @@
   # But on macOS, homebrew has a much larger selection of apps than nixpkgs, especially for GUI apps!
   homebrew = {
     enable = true;
-
     onActivation = {
       autoUpdate = false;
       # 'zap': uninstalls all formulae(and related files) not listed here.
-      # cleanup = "zap";
+      cleanup = "zap";
     };
 
     taps = [
-      "homebrew/services"
+      # place extra home taps here
     ];
 
     # `brew install`
@@ -49,6 +48,11 @@
     casks = [
        "firefox"
        "1password"
+       "visual-studio-code"
+       "maccy"
+       "spotify"
+       "whatsapp"
+       "discord"
     ];
   };
 }
