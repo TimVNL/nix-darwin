@@ -1,3 +1,4 @@
+# TODO change timv-m1mini to your prefered hostname
 deploy:
 	nix build .#darwinConfigurations.timv-m1mini.system \
 	   --extra-experimental-features 'nix-command flakes'
