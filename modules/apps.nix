@@ -60,6 +60,7 @@
        "whatsapp"
        "discord"
        "signal"
+       "microsoft-office"
     ];
   };
 }

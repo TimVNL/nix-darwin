@@ -58,6 +58,7 @@
         ./modules/apps.nix
 
         ./modules/host-users.nix
+        ./modules/disable-resume.nix
       ];
     };
 
