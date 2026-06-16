@@ -40,9 +40,9 @@
     ...
   }: let
     # TODO replace with your own username, system and hostname
-    username = "timv";
-    system = "arch64-darwin"; # aarch64-darwin or x86_64-darwin
-    hostname = "tbnl-timvmacbook";
+    username = "tim.veluwenkamp";
+    system = "aarch64-darwin"; # aarch64-darwin or x86_64-darwin
+    hostname = "TB50141";
 
     specialArgs =
       inputs

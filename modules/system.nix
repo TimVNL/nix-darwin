@@ -21,7 +21,7 @@
       NSGlobalDomain = {
         AppleShowAllExtensions = true;
         AppleShowScrollBars = "Always";
-        AppleInterfaceStyle = "Dark";
+       # AppleInterfaceStyle = "Dark";
         AppleInterfaceStyleSwitchesAutomatically = false;
         "com.apple.swipescrolldirection" = false;  # disable natural scrolling(default to true)
         PMPrintingExpandedStateForPrint = true;
@@ -36,6 +36,7 @@
       dock = {
         autohide = true;
         show-recents = false;  # disable recent apps
+        tilesize = 48
       };
       # END dock
 

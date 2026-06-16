@@ -21,7 +21,6 @@
     git
     dockutil # A nix module that arranges the macOS dock
     htop
-    mas 
   ]; #END systemPackages
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -34,28 +33,12 @@
     onActivation = {
       autoUpdate = true;
       # 'zap': uninstalls all formulae(and related files) not listed here.
-      cleanup = "zap";
+      #cleanup = "zap";
     }; #END onActivation
-
-    # Applications to install from Mac App Store using mas.
-    # You need to install all these Apps manually first so that your apple account have records for them.
-    # otherwise Apple Store will refuse to install them.
-    # For details, see https://github.com/mas-cli/mas
-    masApps = {
-      # TODO Feel free to add your favorite apps here.
-      Amphetamine = 937984704;
-      HiddenBar = 1452453066;
-      Magnet = 441258766;
-      OktaVerify = 490179405;
-    }; #END masApps
-
-    taps = [
-      "homebrew/services"
-    ]; #END taps
 
     caskArgs = {
       appdir = "~/Applications";
-      require_sha = true;
+      #require_sha = true;
     }; #END caskArgs
 
     # `brew install`
@@ -78,7 +61,6 @@
       "spotify"
       "visual-studio-code"
       "whatsapp"
-      "zoom"
     ]; #END casks
   }; #END homebrew
 } #END
